@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Astana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Air_Astana_logo.svg" alt="Air Astana">
+    <nav>
+      <a href="login.html">Вход</a>
+      <a href="leaderboard.html">Таблица лидеров</a>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Путешествуйте с Air Astana</h1>
+    <input id="flightInput" type="text" placeholder="Номер рейса">
+    <button onclick="book()">Забронировать рейс</button>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    const username = prompt("Введите ваш логин для теста");
+
+    async function book() {
+      const flight = document.getElementById("flightInput").value;
+      const res = await bookFlight(username, flight);
+      if(res.success){
+        alert(`Вы забронировали рейс! Баллы: ${res.pointsEarned}, Уровень: ${res.level}`);
+      } else {
+        alert(res.message);
+      }
+    }
+  </script>
+</body>
+</html>

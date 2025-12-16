@@ -1,0 +1,63 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #002147;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+header img {
+  height: 50px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #002147;
+}
+
+nav a:hover {
+  color: #c4a062;
+}
+
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+input, select, button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #c4a062;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #b08d55;
+}
+
+.card {
+  display: inline-block;
+  width: 300px;
+  background: #f9f9f9;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}

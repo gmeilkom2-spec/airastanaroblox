@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход / Регистрация</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <h1>Регистрация</h1>
+    <input id="regUsername" placeholder="Логин">
+    <input id="regPassword" type="password" placeholder="Пароль">
+    <button onclick="registerUser()">Зарегистрироваться</button>
+    
+    <h1>Вход</h1>
+    <input id="loginUsername" placeholder="Логин">
+    <input id="loginPassword" type="password" placeholder="Пароль">
+    <button onclick="loginUser()">Войти</button>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    async function registerUser() {
+      const username = document.getElementById("regUsername").value;
+      const password = document.getElementById("regPassword").value;
+      const res = await register(username, password);
+      alert(res.success ? "Успешно!" : res.message);
+    }
+
+    async function loginUser() {
+      const username = document.getElementById("loginUsername").value;
+      const password = document.getElementById("loginPassword").value;
+      const res = await login(username, password);
+      alert(res.success ? "Успешно вошли!" : res.message);
+    }
+  </script>
+</body>
+</html>
